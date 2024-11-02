@@ -3,7 +3,6 @@ import codecs
 import re
 from nltk.stem import SnowballStemmer
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class TfIdfTokenizer:
