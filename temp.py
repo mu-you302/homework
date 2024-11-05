@@ -1,5 +1,4 @@
 import numpy as np
-
-A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-
-print(A**2)
+import re
+ss = "mathew <mathew@mantis.co.uk>"
+print(re.sub(r"[^a-zA-Z0-9]", " ", ss))
