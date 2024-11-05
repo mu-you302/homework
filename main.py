@@ -136,10 +136,10 @@ tokenizer = TfIdfTokenizer()
 Aik = tokenizer.fit(texts)
 print(Aik)
 # save to npz
-np.savez("tfidf.npz", X=Aik)
+# np.savez("tfidf.npz", X=Aik)
 
 tokenizer_maxdim = TfIdfMaxdim()
 Aik_maxdim = tokenizer_maxdim.fit(texts)
 print(Aik_maxdim)
 # save to npz
-np.savez("tfidf_maxdim.npz", X=Aik_maxdim)
+# np.savez("tfidf_maxdim.npz", X=Aik_maxdim)
