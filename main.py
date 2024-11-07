@@ -21,7 +21,6 @@ class TfIdfTokenizer:
                 self.document_freq[w] = self.document_freq.get(w, 0) + 1
         self.document_freq = dict(
             sorted(self.document_freq.items(), key=lambda x: x[1], reverse=True))
-        freqs = list(self.document_freq.values())
         self.vocab_table = {w: i for i, w in enumerate(
             self.document_freq.keys())}  # word to index table
         self.dims = len(self.document_freq)  # number of unique words
@@ -55,8 +54,8 @@ class TfIdfTokenizer:
 class TfIdfMaxdim(TfIdfTokenizer):
     def __init__(self, max_features=5000) -> None:
         super().__init__()
-        self.max_features = max_features
-        self.term_freq = {}
+        self.max_features = max_features    # max number of features
+        self.term_freq = {}  # term frequency
 
     def update_vocab(self, docs):
         for doc in docs:
@@ -136,10 +135,10 @@ tokenizer = TfIdfTokenizer()
 Aik = tokenizer.fit(texts)
 print(Aik)
 # save to npz
-# np.savez("tfidf.npz", X=Aik)
+np.savez("tfidf.npz", X=Aik)
 
 tokenizer_maxdim = TfIdfMaxdim()
 Aik_maxdim = tokenizer_maxdim.fit(texts)
 print(Aik_maxdim)
 # save to npz
-# np.savez("tfidf_maxdim.npz", X=Aik_maxdim)
+np.savez("tfidf_maxdim.npz", X=Aik_maxdim)
