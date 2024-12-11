@@ -1,0 +1,8 @@
+path: .
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+names:
+    0: LGG

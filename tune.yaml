@@ -1,0 +1,16 @@
+path: .
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+names:
+    0: LGG
+
+# data augmentation
+augmentations:
+    flip_lr: 0.5  # flip left-right
+    hsv_s: 0.7  # adjust saturation
+    scale: 0.5  # adjust scale
+    perspective: 0.3  # perspective transform
+    bgr: 0.2  # change channel
