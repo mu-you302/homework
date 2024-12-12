@@ -25,6 +25,8 @@ Corresponding masks have a `_mask` suffix.
 
 整个数据集中一共包含3929张图片，图片尺寸大小为(256, 256)
 
+YOLOv8 中关于数据增强的配置应该写在yaml配置文件中
+
 在目标检测中，如果你想减少结果中的边界框（bbox）数量，主要可以调节以下几个参数：
 1. 置信度阈值（Confidence Threshold）：
    - 这是最直接和常用的方法。
