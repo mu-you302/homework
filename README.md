@@ -62,3 +62,6 @@ for logger in loggers:
     print(logger.name)
 ```
 
+## YOLO 训练策略
+如果数据集中存在较多的困难场景，如拥挤场景，可以将这种区域中的输出直接忽略，不计算任何损失。
+参考https://zhuanlan.zhihu.com/p/617677829
